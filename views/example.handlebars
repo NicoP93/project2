@@ -1,19 +1,64 @@
 <div class="container">
   <div class="row">
-    <div class="col-8 offset-2">
+    <div class="col-12">
+      <!--heading of cryptid page-->
       <div class="card mt-4">
         <div class="card-body">
-          <h5 class="card-title">Example</h5>
-          <p>
-            <strong>ID</strong>: {{example.id}}</p>
-          <p>
-          <p>
-            <strong>Text</strong>: {{example.text}}</p>
-          <p>
-            <strong>Description:</strong> {{example.description}}</p>
-            <a href="/">← Back To Home</a>
+          <div class = "row">
+            <div class="col-6">
+              <h3>
+                <strong>Cryptid Name</strong>: {{example.id}}</h3>
+            </div>
+            <div class="col-6">
+              <h3> 
+                <strong>Cryptid Family</strong>: {{example.text}}</h3>
+            </div>
+          </div>
         </div>
       </div>
+      <!--box where we put the image-->
+      <div class="card mt-4 imageBox">
+        <div class="card-body">
+          <strong>Image</strong>
+          <!--<a href="image path">-->
+        </div>
+      </div>
+      <div class="card mt-4 descriptionBox">
+        <div class="card-body">
+            <p>
+              <strong>Description:</strong> {{example.description}}</p>
+        </div>
+      </div>
+      <div class="card mt-4 scpBox">
+        <div class="card-body">
+            <p>
+              <strong>SCP:</strong> <!--different link{{example.description}}--></p>
+        </div>
+      </div>
+      <!--footer(geolocation, map, forum)-->
+      <div class="card mt-4 footerBox">
+        <div class="card-body">
+          <div class="row">
+             <div class="col-4">
+                <p>
+                  <strong>Geolocation</strong></p>
+              </div>
+          
+         
+             <div class="col-4">
+                <p>
+                  <strong>Map</strong></p>
+              </div>
+          
+          
+             <div class="col-4">
+                <p>
+                  <strong>Forum</strong></p>
+              </div>
+          </div>        
+        </div>
+      </div>
+            <a href="/">← Back To Home</a>  
     </div>
   </div>
 </div>

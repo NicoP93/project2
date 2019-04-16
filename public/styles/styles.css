@@ -1,3 +1,15 @@
 .list-group-item {
   line-height: 2.5;
 }
+.imageBox{
+  height:300px;
+}
+.descriptionBox{
+  height:200px;
+}
+.scpBox{
+  height:150px;
+}
+.footerBox{
+  height:100px;
+}
