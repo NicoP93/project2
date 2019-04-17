@@ -1,10 +1,10 @@
 var db = require("../models");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Get all examples
 
-  app.get("/api/cryptid", function(req, res) {
-    db.Cryptid.findAll({}).then(function(results) {
+  app.get("/api/cryptid", function (req, res) {
+    db.Cryptid.findAll({}).then(function (results) {
       res.json(results);
     });
   });
@@ -17,13 +17,17 @@ module.exports = function(app) {
   // });
 
   // Pull a single cryptid by id
-  app.get("/api/cryptid/:id", function(req, res) {
+  app.get("/api/cryptid/:id", function (req, res) {
     db.Cryptid.findOne({
       where: { itemNum: req.params.id }
-    }).then(function(results) {
-      res.render("example", {
-        example: results
-      })
-    });
+    }).then(function (results) {
+     // res.json(results);
+     //console.log(results.cryptid);
+     //var jsonObj = JSON.stringify(results, null, 2);
+     res.json(results)
+    //  console.log(jsonObj.Cryptid);
+    //  console.log(results.id);
+    //   res.render("example", {results: results});
   });
-};
+});
+}
