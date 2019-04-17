@@ -20,7 +20,7 @@ function validateForm() {
   }
 }
 
-$("#add").click(function() {
+$("#add").click(function () {
   event.preventDefault();
   validateForm();
   addSpecimen();

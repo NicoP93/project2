@@ -3,7 +3,7 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Cryptid.findAll({}).then(function(results) {
+    db.Cryptid.findAll  ({}).then(function(results) {
       res.render("index", {
          results
       });
