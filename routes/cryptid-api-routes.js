@@ -19,11 +19,11 @@ module.exports = function(app) {
   // Pull a single cryptid by id
   app.get("/api/cryptid/:id", function(req, res) {
     db.Cryptid.findOne({
-      where: { id: req.params.id }
+      where: { itemNum: req.params.id }
     }).then(function(results) {
       res.render("example", {
         example: results
-      });
+      })
     });
   });
 };
