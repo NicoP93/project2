@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
     item_num: DataTypes.STRING
     obj_class: DataTypes.STRING
     procedures: DataTypes.STRING
-    description: DataTypes.STRING
+    description: DataTypes.TEXT
     page_url: DataTypes.STRING
     img_url: DataTypes.STRING
   });
