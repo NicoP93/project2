@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
@@ -100,5 +101,16 @@ $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
 
 $(".descriptionBox").click(function(){
-  console.log("enlarging current div");
+  console.log("enlarging description div");
 });
+
+$(".imageBox").click(function(){
+  console.log("enlarging image div");
+  
+});
+
+$(".scpBox").click(function(){
+  console.log("enlarging scp div");
+});
+
+

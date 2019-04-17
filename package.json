@@ -11,25 +11,17 @@
   },
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
+    "body-parser": "^1.18.3",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
-    "mysql2": "^1.6.4",
-    "sequelize": "^4.43.2"
-=======
-    "body-parser": "^1.18.3",
-    "dotenv": "^6.0.0",
-    "express": "^4.16.4",
-    "express-handlebars": "^3.0.2",
     "mysql": "^2.16.0",
-    "mysql2": "^1.6.4",
+    "mysql2": "^1.6.5",
     "nodemon": "^1.18.11",
-    "sequelize": "^4.41.2"
->>>>>>> 9541e7e773a830ee9f39b469a0d2738ea7c8ac6a
+    "sequelize": "^4.43.2"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
+    "chai": "^4.2.0",
     "chai-http": "^4.0.0",
     "cross-env": "^5.2.0",
     "eslint": "^4.19.1",
