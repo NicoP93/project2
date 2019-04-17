@@ -4,19 +4,19 @@ module.exports = function(sequelize, DataTypes) {
     name: DataTypes.STRING,
     itemNum: DataTypes.STRING,
     objClass: DataTypes.STRING,
-    description: DataTypes.STRING,
-    procedures: DataTypes.STRING,
+    description: DataTypes.TEXT,
+    procedures: DataTypes.TEXT,
     pageUrl: DataTypes.STRING,
     imgUrl: DataTypes.STRING
   });
 
-  Cryptid.associate = function(models) {
-    // Associating Author with Posts
-    // When an Author is deleted, also delete any associated Posts
-    Cryptid.hasMany(models.Post, {
-      onDelete: "cascade"
-    });
-  };
+  // Cryptid.associate = function(models) {
+  //   // Associating Author with Posts
+  //   // When an Author is deleted, also delete any associated Posts
+  //   Cryptid.hasMany(models.Post, {
+  //     onDelete: "cascade"
+  //   });
+  // };
 
   return Cryptid;
 };
