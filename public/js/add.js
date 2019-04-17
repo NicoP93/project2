@@ -27,13 +27,33 @@ $("#add").click(function () {
   $.ajax("/api/cryptids", {
     type: "POST",
     data: newCryptid
+<<<<<<< HEAD
   }).then(
     function () {
       console.log("created new cryptid");
       location.reload();
     }
   )
+=======
+  }).then(function() {
+    console.log("created new cryptid");
+    location.reload();
+  });
+>>>>>>> master
 });
+
+$("#submit").click(function() {
+  event.preventDefault();
+  validateForm();
+  $.ajax("/api/cryptid", {
+    type: "GET",
+    data: Cryptid
+  }).then(function() {
+    console.log("fetched cryptids");
+    location.reload();
+  });
+});
+
 
 function addSpecimen() {
   if (valid === true) {
