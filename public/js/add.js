@@ -27,19 +27,10 @@ $("#add").click(function () {
   $.ajax("/api/cryptids", {
     type: "POST",
     data: newCryptid
-<<<<<<< HEAD
-  }).then(
-    function () {
-      console.log("created new cryptid");
-      location.reload();
-    }
-  )
-=======
   }).then(function() {
     console.log("created new cryptid");
     location.reload();
   });
->>>>>>> master
 });
 
 $("#submit").click(function() {
