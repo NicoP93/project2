@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "blogger",
+    "database": "cryptidX",
     "host": "localhost",
     "port": 3307,
     "dialect": "mysql"

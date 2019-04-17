@@ -1,0 +1,50 @@
+<h1>Logo Here</h1>
+
+<div class="jumbotron add-specimen">
+    <h4>Add a Specimen</h4>
+
+    <hr class="my-4">
+
+
+<form class="add-specimen" action="script.cgi" onSubmit="return validateForm()">
+    <input class="form-control" id="name" type="text" placeholder="Name">
+
+    <input class="form-control" id="number" type="number" placeholder="Item Number">
+
+
+
+    <select class="selectpicker" id="select-class">
+
+        <option value="">Select Class</option>
+        <option value="safe">Safe</option>
+        <option value="euclid">Euclid</option>
+        <option value="keter">Keter</option>
+        <option value="thaumiel">Thaumiel</option>
+        <option value="neutralized">Neutralized</option>
+    </select>
+
+    <br>
+
+    <div class="form-group">
+        
+        <textarea class="form-control" id="procedures" rows="3" placeholder="Containment Procedures"></textarea>
+    </div>
+
+    <div class="form-group">
+        
+        <textarea class="form-control" id="description" rows="3" placeholder="Description"></textarea>
+    </div>
+
+    <input class="form-control" id="page-url" type="text" placeholder="Wiki Page URL">
+
+    <input class="form-control" id="img-url" type="text" placeholder="Image URL">
+</form>
+
+    
+    <button class="btn btn-secondary btn-lg" id="add" role="button">add</button>
+    <div class="invalid"></div>
+
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/add.js"></script>

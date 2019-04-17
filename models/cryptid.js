@@ -2,21 +2,21 @@ module.exports = function(sequelize, DataTypes) {
   var Cryptid = sequelize.define("Cryptid", {
     // Giving the Author model a name of type STRING
     name: DataTypes.STRING,
-    item_num: DataTypes.STRING,
-    obj_class: DataTypes.STRING,
-    procedures: DataTypes.STRING,
-    description: DataTypes.STRING,
-    page_url: DataTypes.STRING,
-    img_url: DataTypes.STRING
+    itemNum: DataTypes.STRING,
+    objClass: DataTypes.STRING,
+    description: DataTypes.TEXT,
+    procedures: DataTypes.TEXT,
+    pageUrl: DataTypes.STRING,
+    imgUrl: DataTypes.STRING
   });
 
-  Cryptid.associate = function(models) {
-    // Associating Author with Posts
-    // When an Author is deleted, also delete any associated Posts
-    Cryptid.hasMany(models.Post, {
-      onDelete: "cascade"
-    });
-  };
+  // Cryptid.associate = function(models) {
+  //   // Associating Author with Posts
+  //   // When an Author is deleted, also delete any associated Posts
+  //   Cryptid.hasMany(models.Post, {
+  //     onDelete: "cascade"
+  //   });
+  // };
 
   return Cryptid;
 };
