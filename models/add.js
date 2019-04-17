@@ -26,6 +26,15 @@ var valid = "";
         validateForm();
         addSpecimen();
         
+        $.ajax("/api/cryptids", {
+            type: "POST",
+            data: newCryptid
+        }).then(
+            function () {
+                console.log("created new cryptid");
+                location.reload();
+            }
+        )
     })
 
     function addSpecimen() {
@@ -41,3 +50,4 @@ var valid = "";
         }};
         console.log(newSpecimen);
     }
+
