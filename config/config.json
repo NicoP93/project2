@@ -4,6 +4,7 @@
     "password": null,
     "database": "cryptidX",
     "host": "localhost",
+    "port": 3307,
     "dialect": "mysql"
   },
   "test": {
