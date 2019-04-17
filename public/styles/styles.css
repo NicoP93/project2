@@ -31,13 +31,15 @@ body {
   line-height: 2.5;
 }
 .imageBox{
-  height:300px;
+  overflow:hidden;
 }
 .descriptionBox{
-  height:200px;
+  height:100px;
+  overflow:hidden;
 }
 .scpBox{
-  height:150px;
+  height:100px;
+  overflow:hidden;
 }
 .footerBox{
   height:125px;
