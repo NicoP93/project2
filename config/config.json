@@ -4,7 +4,7 @@
     "password": "S!mpsons1",
     "database": "cryptidX",
     "host": "localhost",
-    "port": 3306,
+    "port": 3307,
     "dialect": "mysql"
   },
   "test": {
