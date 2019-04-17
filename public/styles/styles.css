@@ -9,12 +9,17 @@ body {
   
 }
 
+.top-container img{
+  max-width: 600px;
+}
+
 .nav {
   height: 40px;
 }
 
 .jumbotron{
-  width: 90%;
+  background-color: rgb(32, 35, 45, .4);
+  width: 94%;
   margin-right: auto;
   margin-left: auto;
 }
