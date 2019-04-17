@@ -1,3 +1,29 @@
+body {
+  background-image: url(../img/background.png);
+}
+
+.top-container {
+  
+  background-image: url(./../img/titlebackground.png);
+  height: 250px;
+  
+}
+
+.nav {
+  height: 40px;
+}
+
+.jumbotron{
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.search {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .list-group-item {
   line-height: 2.5;
 }

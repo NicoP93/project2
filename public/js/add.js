@@ -20,19 +20,19 @@ function validateForm() {
   }
 }
 
-$("#add").click(function() {
+$("#add").click(function () {
   event.preventDefault();
   validateForm();
   addSpecimen();
   $.ajax("/api/cryptids", {
     type: "POST",
     data: newCryptid
-}).then(
+  }).then(
     function () {
-        console.log("created new cryptid");
-        location.reload();
+      console.log("created new cryptid");
+      location.reload();
     }
-)
+  )
 });
 
 function addSpecimen() {
