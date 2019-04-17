@@ -1,7 +1,7 @@
 var db = require("../models");
 
 module.exports = function(app) {
-//commands we need  add a cryptid
+  //commands we need  add a cryptid
 
   app.get("/api/authors", function(req, res) {
     // Here we add an "include" property to our options in our findAll query
