@@ -26,6 +26,17 @@ require("./routes/html-routes")(app);
 require("./routes/cryptid-api-routes")(app);
 require("./routes/add-api-routes")(app);
 
+app.get("/test", function(req, res){
+  db.Cryptid.findOne({
+    where: { itemNum: 173}
+  }).then(function (results) {
+   // res.json(results);
+   //console.log(results.cryptid);
+   //var jsonObj = JSON.stringify(results, null, 2);
+   console.log(JSON.stringify(results, null, 2));
+   res.render("example", {results: results})
+  });
+});
 var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true

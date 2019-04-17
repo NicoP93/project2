@@ -21,9 +21,13 @@ module.exports = function(app) {
     db.Cryptid.findOne({
       where: { itemNum: req.params.id }
     }).then(function(results) {
-      res.render("cryptid", {
-        example: results
-      });
+      // res.json(results);
+      //console.log(results.cryptid);
+      //var jsonObj = JSON.stringify(results, null, 2);
+      res.json(results);
+      //  console.log(jsonObj.Cryptid);
+      //  console.log(results.id);
+      //   res.render("example", {results: results});
     });
   });
 };
