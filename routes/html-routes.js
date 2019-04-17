@@ -9,14 +9,20 @@ module.exports = function(app) {
       });
     });
   });
-
+  
+  // app.get("/test", function(req, res){
+  //   db.Cryptid.findOne({
+  //     where: { itemNum: 173}
+  //   }).then(function (results) {
+  //    console.log(JSON.stringify(results, null, 2));
+  //    res.render("example", {cryptid: results})
+  //   });
+  // });
 
     // Load example page and pass in an example by id
     app.get("/cryptid-view/:id", function(req, res) {
       db.Cryptid.findOne({ where: { id: req.params.id } }).then(function(results) {
-        res.render("example", {
-         results
-        });
+        res.render("cryptid", { cryptid: results});
       });
     });
 
