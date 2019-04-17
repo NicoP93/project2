@@ -1,7 +1,6 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
-
 var db = require("./models");
 
 var app = express();
@@ -27,6 +26,17 @@ require("./routes/html-routes")(app);
 require("./routes/cryptid-api-routes")(app);
 require("./routes/add-api-routes")(app);
 
+app.get("/test", function(req, res){
+  db.Cryptid.findOne({
+    where: { itemNum: 173}
+  }).then(function (results) {
+   // res.json(results);
+   //console.log(results.cryptid);
+   //var jsonObj = JSON.stringify(results, null, 2);
+   console.log(JSON.stringify(results, null, 2));
+   res.render("example", {results: results})
+  });
+});
 var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
@@ -36,7 +46,7 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync(syncOptions).then(function() {
   app.listen(PORT, function() {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
