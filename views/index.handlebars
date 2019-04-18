@@ -5,43 +5,17 @@
 <div class="nav">
     <a href="#">Add</a>
     <a href="#">Directory</a>
-    <input class="form-control" id="search-input" type="text" placeholder="Default input">
-    <a class="button" herf="#" id="search" role="button">search</a>
+    <form id="content">
+        <input type="text" name="input" class="input" id="search-input">
+        <button type="reset" class="search" id="search-btn"></button>
+    </form>
+    {{!-- <form class="example" action="action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </form> --}}
 </div>
 
-<div class="jumbotron search">
 
-    <h4>Directory</h4>
-
-    <hr class="my-4">
-
-    <a href="#">Series I</a>
-    <a href="#">Series II</a>
-    <a href="#">Series III</a>
-    <a href="#">Series IV</a>
-    <a href="#">Series V</a>
-
-    <hr class="my-4">
-
-    <h4>Search the CryptidX</h4>
-
-    <hr class="my-4">
-
-    <input class="form-control" id="search-input" type="text" placeholder="Default input">
-
-    <select class="selectpicker" id="search-class">
-
-        <option value="" disabled selected>Search by Class</option>
-        <option value="safe">Safe</option>
-        <option value="euclid">Euclid</option>
-        <option value="keter">Keter</option>
-        <option value="thaumiel">Thaumiel</option>
-        <option value="neutralized">Neutralized</option>
-    </select>
-
-    <br>
-    <a class="btn btn-secondary btn-lg" href="#" role="button">search</a>
-</div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
