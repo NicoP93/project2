@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "S!mpsons1",
+    "password": "root",
     "database": "cryptidX",
     "host": "localhost",
     "port": 3307,
