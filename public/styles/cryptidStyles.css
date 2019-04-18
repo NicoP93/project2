@@ -1,0 +1,47 @@
+.imageBox{
+    overflow:hidden;
+  }
+  .descriptionBox{
+    height:100px;
+    overflow:hidden;
+  }
+  .scpBox{
+    height:100px;
+    overflow:hidden;
+  }
+  .footerBox{
+    height:125px;
+  }
+  .cryptidClass{
+    text-align: right;
+  }
+  .geolocationBox{
+    text-align: center;
+  }
+  .mapBox{
+    text-align: center;
+  }
+  .forumBox{
+    height:75px;
+    text-align: center;
+  }
+  .container{
+    background-color: #272926
+  }
+  body{
+    background-color: #51584e
+  }
+  .card{
+    background-color: #d8d8d8
+  }
+  a{
+    color:white;
+  }
+  .footerButtons{
+      background-color:#a1c07e
+  }
+img{
+    max-width:40%;
+    height:auto;
+    margin-left: 30%;
+}
