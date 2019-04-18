@@ -24,6 +24,10 @@ module.exports = function(app) {
       res.render("signup", {});
     });
 
+    app.get("/login", (req, res) => {
+      res.render("login", {});
+    })
+
   // Render 404 page for any unmatched routes
 
 };
