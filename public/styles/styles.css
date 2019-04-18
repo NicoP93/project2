@@ -1,18 +1,32 @@
+body {
+  background-image: url(../img/background.png);
+}
+
+.top-container {
+  
+  background-image: url(./../img/titlebackground.png);
+  height: 250px;
+  
+}
+
+.top-container img{
+  max-width: 600px;
+}
+
+
+
+.jumbotron{
+  background-color: rgb(32, 35, 45, .4);
+  width: 94%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.search {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .list-group-item {
   line-height: 2.5;
-}
-.imageBox{
-  height:300px;
-}
-.descriptionBox{
-  height:200px;
-}
-.scpBox{
-  height:150px;
-}
-.footerBox{
-  height:125px;
-}
-.cryptidClass{
-  text-align: right;
 }

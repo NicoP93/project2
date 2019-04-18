@@ -45,7 +45,6 @@ $("#submit").click(function() {
   });
 });
 
-
 function addSpecimen() {
   if (valid === true) {
     var newSpecimen = {

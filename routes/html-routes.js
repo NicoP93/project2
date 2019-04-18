@@ -3,12 +3,19 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Cryptid.findAll({}).then(function(results) {
+    db.Cryptid.findAll  ({}).then(function(results) {
       res.render("index", {
          results
+      });//"parsing error unexpected token" but no action available
+    });
+  })
+
+  app.get("/cryptid-view/add", function(req, res) {
+      res.render("add", {
+
       });
     });
-  });
+
   
   // app.get("/test", function(req, res){
   //   db.Cryptid.findOne({

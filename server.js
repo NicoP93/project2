@@ -26,7 +26,6 @@ require("./routes/html-routes")(app);
 require("./routes/cryptid-api-routes")(app);
 require("./routes/add-api-routes")(app);
 
-
 var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
