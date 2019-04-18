@@ -19,7 +19,7 @@ module.exports = function(app) {
   // Pull a single cryptid by id
   app.get("/api/cryptid/:id", function(req, res) {
     db.Cryptid.findOne({
-      where: { itemNum: req.params.id }
+      where: { id: req.params.id }
     }).then(function(results) {
       // res.json(results);
       //console.log(results.cryptid);
