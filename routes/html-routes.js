@@ -6,10 +6,9 @@ module.exports = function(app) {
     db.Cryptid.findAll  ({}).then(function(results) {
       res.render("index", {
          results
-      });
+      });//"parsing error unexpected token" but no action available
     });
-  });
-  
+  })
 
   app.get("/cryptid-view/add", function(req, res) {
       res.render("add", {

@@ -1,5 +1,5 @@
 module.exports = {
-  up: (queryInterface, Sequelize) => {
+  up: (queryInterface, Sequelize) => {//"Parsing error ESLint" but no actions available??
     return queryInterface.bulkInsert('Cryptids',
     [
         {   
