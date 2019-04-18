@@ -10,11 +10,11 @@ module.exports = function(app) {
   });
 
   // // Create a new cryptid
-  // app.post("/api/cryptid", function(req, res) {
-  //   db.Cryptid.create(req.body).then(function(results) {
-  //     res.json(results);
-  //   });
-  // });
+  app.post("/api/cryptid/add", function(req, res) {
+    db.Cryptid.create(req.body).then(function(results) {
+      res.json(results);
+    });
+  });
 
   // Pull a single cryptid by id
   app.get("/api/cryptid/:id", function(req, res) {

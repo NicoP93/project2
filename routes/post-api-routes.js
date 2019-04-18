@@ -18,9 +18,7 @@ module.exports = function(app) {
 
   // POST route for saving a new post
   app.post("/api/posts", function(req, res) {
-    db.Post.create(req.body).then(function(results) {
-      res.json(results);
-    });
+    res.json(results);
   });
 
   // DELETE route for deleting posts
@@ -42,6 +40,30 @@ module.exports = function(app) {
       }
     }).then(function(dbPost) {
       res.json(dbPost);
+    });
+  });
+
+  //POSTs the login information into the Users database
+  app.post("/api/signup", function(req, res) {
+    db.User.create(req.body).then(function(data){
+        res.json(data);
+        // res.redirect("/login");
+      }).catch(function(err) {
+        console.log(err);
+        res.json(err);
+      });
+  });
+
+  //
+  app.post("/api/login", function(req, res){
+    db.User.findOne({where:{
+      email: req.body.email
+    }}).then(function(dbUser){
+      if(dbUser.validPassword(req.body.password)){
+        res.send("Validated");
+      } else {
+        res.send("Wrong Password!");
+      }
     });
   });
 };
