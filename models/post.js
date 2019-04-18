@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var Post = sequelize.define("Post", {
-    author :{
+    author: {
       type: DataTypes.STRING,
 
       allowNull: false,
@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
-    
+
     body: {
       type: DataTypes.TEXT,
       allowNull: false,
