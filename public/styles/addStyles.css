@@ -1,0 +1,10 @@
+.logo{
+    height:50px;
+    width:auto;
+}
+body{
+    background-image: url("../img/background.png")
+}
+.add-specimen{
+    background-color: #8c9482
+}

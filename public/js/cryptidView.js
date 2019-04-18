@@ -1,7 +1,7 @@
 var descriptionSize = "small";
-var imageSize = "small";
 var scpSize = "small";
 var forumSize = "small";
+//var imageSize = "small";
 
 $(".descriptionBox").click(function() {
   if (descriptionSize === "small") {
@@ -17,16 +17,23 @@ $(".descriptionBox").click(function() {
   }
 });
 
-//change the imageBox to enlarge the actual image instead of the div
+//resizing image code (not working well)
+/*
 $(".imageBox").click(function() {
   if (imageSize === "small") {
+    $("img").css("width", "100%");
+    
     $(".imageBox").css("height", "80%");
     $(".imageBox").css("transition", "1s");
-    $("img").css("max-height", "800px");
+    $("img").css("max-height", "auto");
     $("img").css("height", "100%");
-    $("img").css("max-width", "500px");
-    $("img").css("width", "500px");
-    $("img").css("margin-left", "0px");
+    $("img").css("max-width", "620px");
+    $("img").css("width", "620px");
+    $("img").css("margin", "0 auto");
+    $("img").css("width", "80em");
+    $("img").css("transition", "1s");
+    $(".imageBox").css("height", "auto");
+
 
     imageSize = "large";
     console.log("enlarging image div");
@@ -37,6 +44,7 @@ $(".imageBox").click(function() {
     console.log("shrinking image div");
   }
 });
+*/
 
 $(".scpBox").click(function() {
   if (scpSize === "small") {
