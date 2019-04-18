@@ -3,19 +3,22 @@ body {
 }
 
 .top-container {
-  
+
   background-image: url(./../img/titlebackground.png);
-  height: 250px;
+  height: 150px;
+
+}
+
+.top-container img {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 25px;
   
 }
 
-.top-container img{
-  max-width: 600px;
-}
 
 
-
-.jumbotron{
+.jumbotron {
   background-color: rgb(32, 35, 45, .4);
   width: 94%;
   margin-right: auto;
@@ -30,38 +33,45 @@ body {
 .list-group-item {
   line-height: 2.5;
 }
-.imageBox{
-  overflow:hidden;
+
+.imageBox {
+  overflow: hidden;
 }
-.descriptionBox{
-  height:100px;
-  overflow:hidden;
+
+.descriptionBox {
+  height: 100px;
+  overflow: hidden;
 }
-.scpBox{
-  height:100px;
-  overflow:hidden;
+
+.scpBox {
+  height: 100px;
+  overflow: hidden;
 }
-.footerBox{
-  height:125px;
+
+.footerBox {
+  height: 125px;
 }
-.cryptidClass{
+
+.cryptidClass {
   text-align: right;
 }
 
 .nav {
-  background-color: plum;
+  background-color: rgb(32, 35, 45, .4);
   display: block;
 }
 
 
 /* fancy search bar */
 
+
+
 #content {
-  margin-top: 20px !important;
-  height: 35px;
-  width: 300px;
-  margin-left: 90% !important;
-  
+  margin-top: 10px !important;
+  height: 20px;
+  width: 20px;
+  margin-left: 97% !important;
+  margin-right: 5px !important;
   transform: translate(-50%, -50%);
 }
 
@@ -78,8 +88,8 @@ body {
 
 input {
   box-sizing: border-box;
-  width: 35px;
-  height: 35px;
+  width: 20px;
+  height: 20px;
   border: 4px solid #ffffff;
   border-radius: 50%;
   background: none;
@@ -122,14 +132,14 @@ input {
 .search:before {
   content: "";
   position: absolute;
-  width: 15px;
+  width: 10px;
   height: 4px;
   background-color: #fff;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  margin-top: 16px;
-  margin-left: 11px;
+  margin-top: 12px;
+  margin-left: 15px;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
@@ -173,7 +183,7 @@ input {
 .square {
   box-sizing: border-box;
   padding: 0 40px 0 10px;
-  width: 300px;
+  width: 180px;
   height: 35px;
   border: 4px solid #ffffff;
   border-radius: 0;
@@ -194,4 +204,11 @@ input {
   transform: translate(-100%, -50%);
 }
 
+/* end of fancy hover */
 
+.nav a {
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  padding: 10px;
+  font-size: 150%;
+}
