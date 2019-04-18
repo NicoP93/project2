@@ -29,9 +29,17 @@ module.exports = function(app) {
     // Load example page and pass in an example by id
     app.get("/cryptid-view/:id", function(req, res) {
       db.Cryptid.findOne({ where: { id: req.params.id } }).then(function(results) {
-        res.render("cryptid", { cryptid: results});
+        res.render("cryptid", { results});
       });
     });
+
+    app.get("/signup", (req, res) => {
+      res.render("signup", {});
+    });
+
+    app.get("/login", (req, res) => {
+      res.render("login", {});
+    })
 
   // Render 404 page for any unmatched routes
 
