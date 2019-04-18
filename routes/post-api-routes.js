@@ -18,8 +18,7 @@ module.exports = function(app) {
 
   // POST route for saving a new post
   app.post("/api/posts", function(req, res) {
-      res.json(results);
-    });
+    res.json(results);
   });
 
   // DELETE route for deleting posts
