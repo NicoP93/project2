@@ -1,3 +1,5 @@
+/* eslint-disable */
+/* tslint:disable */
 module.exports = {
   up: (queryInterface, Sequelize) => {//"Parsing error ESLint" but no actions available??
     return queryInterface.bulkInsert('Cryptids',
@@ -25,7 +27,7 @@ module.exports = {
             updatedAt: "2019-04-15 16:41:28"
         },
         {
-            name: "SCP-049", 
+            name:"SCP-049",
             itemNum: 049,
             objClass: "Euclid",
             description: "SCP-049 is contained within a Standard Secure Humanoid Containment Cell in Research Sector-02 at Site-19. SCP-049 must be sedated before any attempts to transport it. During transport, SCP-049 must be secured within a Class III Humanoid Restriction Harness (including a locking collar and extension restraints) and monitored by no fewer than two armed guards.\n\nWhile SCP-049 is generally cooperative with most Foundation personnel, outbursts or sudden changes in behaviour are to be met with elevated force. Under no circumstances should any personnel come into direct contact with SCP-049 during these outbursts. In the event SCP-049 becomes aggressive, the application of lavender (L. multifida) has been shown to produce a calming effect on the entity. Once calmed, SCP-049 generally becomes compliant, and will return to containment with little resistance.\n\nIn order to facilitate the ongoing containment of SCP-049, the entity is to be provided with the corpse of a recently deceased animal (typically a bovine or other large mammal) once every two weeks for study. Corpses that become instances of SCP-049-2 are to be removed from SCP-049's containment cell and incinerated. SCP-049 is no longer permitted to interact with human subjects, and requests for human subjects are to be denied.",

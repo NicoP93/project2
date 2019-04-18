@@ -20,7 +20,7 @@ function validateForm() {
   }
 }
 
-$("#add").click(function () {
+$("#add").click(function() {
   event.preventDefault();
   validateForm();
   addSpecimen();
@@ -44,7 +44,6 @@ $("#submit").click(function() {
     location.reload();
   });
 });
-
 
 function addSpecimen() {
   if (valid === true) {
