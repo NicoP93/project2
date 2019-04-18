@@ -23,12 +23,12 @@ function validateForm() {
 $("#add").click(function() {
   event.preventDefault();
   validateForm();
-  addSpecimen();
-  $.ajax("/api/cryptids", {
+  var newCryptid = addSpecimen();
+  $.ajax("/api/add", {
     type: "POST",
     data: newCryptid
   }).then(function() {
-    console.log("created new cryptid");
+    console.log("created = new cryptid");
     location.reload();
   });
 });
@@ -45,7 +45,6 @@ $("#submit").click(function() {
   });
 });
 
-
 function addSpecimen() {
   if (valid === true) {
     var newSpecimen = {
@@ -57,6 +56,7 @@ function addSpecimen() {
       pageURL: $("#page-url").val(),
       imgURL: $("#img-url").val()
     };
+    return(newSpecimen)
   }
   console.log(newSpecimen);
 }
