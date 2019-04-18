@@ -42,4 +42,28 @@ module.exports = function(app) {
       res.json(dbPost);
     });
   });
+
+  //POSTs the login information into the Users database
+  app.post("/api/signup", function(req, res) {
+    db.User.create(req.body).then(function(data){
+        res.json(data);
+        // res.redirect("/login");
+      }).catch(function(err) {
+        console.log(err);
+        res.json(err);
+      });
+  });
+
+  //
+  app.post("/api/login", function(req, res){
+    db.User.findOne({where:{
+      email: req.body.email
+    }}).then(function(dbUser){
+      if(dbUser.validPassword(req.body.password)){
+        res.send("Validated");
+      } else {
+        res.send("Wrong Password!");
+      }
+    });
+  });
 };
