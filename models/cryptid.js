@@ -10,13 +10,14 @@ module.exports = function(sequelize, DataTypes) {
     imgUrl: DataTypes.STRING
   });
 
-  // Cryptid.associate = function(models) {
-  //   // Associating Author with Posts
-  //   // When an Author is deleted, also delete any associated Posts
-  //   Cryptid.hasMany(models.Post, {
-  //     onDelete: "cascade"
-  //   });
-  // };
+
+  Cryptid.associate = function(models) {
+    // Associating Author with Posts
+    // When an Author is deleted, also delete any associated Posts
+    Cryptid.hasMany(models.Post, {
+      onDelete: "cascade"
+    });
+  };
 
   return Cryptid;
 };
