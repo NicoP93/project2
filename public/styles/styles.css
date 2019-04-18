@@ -1,20 +1,3 @@
 .list-group-item {
   line-height: 2.5;
 }
-.imageBox{
-  overflow:hidden;
-}
-.descriptionBox{
-  height:100px;
-  overflow:hidden;
-}
-.scpBox{
-  height:100px;
-  overflow:hidden;
-}
-.footerBox{
-  height:125px;
-}
-.cryptidClass{
-  text-align: right;
-}
