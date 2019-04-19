@@ -16,8 +16,8 @@ module.exports = function(app) {
       });
     });
 
-    app.get("/post/add", function(req, res) {
-      res.render("post", {
+    app.get("/post/add/:id", function(req, res) {
+      res.render("post", { 
 
       });
     });
@@ -26,9 +26,10 @@ module.exports = function(app) {
     app.get("/cryptid-view/:id", function(req, res) {
       db.Cryptid.findOne({
         where : { id: req.params.id },
-        include : [db.Post]
+        //include dbpost currently making cryptid view page not work
+        //include : [db.Post]
       }).then(function(results) {
-        res.render("cryptid", {results});
+        res.render("cryptid", {results, prev: +req.params.id -1, next: +req.params.id + 1});
       });
     });
 

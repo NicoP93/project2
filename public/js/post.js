@@ -1,41 +1,42 @@
 var valid = "";
 
 function validateForm() {
-    //assign vars to div values
-    var a = $("userPost").val();
+  //assign vars to div values
+  var a = $("userPost").val();
 
-    if (!a) {
-        $(".invalid").empty();
-        $(".invalid").append("<p>You gotta say something, man.</p>");
-        valid = false;
-    } else {
-        $(".invalid").empty();
-        valid = true;
-    }
+  if (!a) {
+    $(".invalid").empty();
+    $(".invalid").append("<p>You gotta say something, man.</p>");
+    valid = false;
+  } else {
+    $(".invalid").empty();
+    valid = true;
+  }
 }
 
 $("#add").click(function () {
-    event.preventDefault();
-    validateForm();
-    var newPost = addPost();
-    console.log("new post:" + newPost);
-    $.ajax("api/post/add", {
-        type: "POST",
-        data: newPost
-    }).then(function () {
-        //need to put something here to go back to the cryptid page
-        //we need to keep track of the cryptid we came from
-        location.reload();
-    });
+  event.preventDefault();
+  validateForm();
+  var newPost = addPost();
+  console.log("new post:" + newPost);
+  $.ajax("api/post/add", {
+    type: "POST",
+    data: newPost
+  }).then(function () {
+    //this reloads the cryptid-view page with the id from before
+    window.location.replace("/cryptid-view/" + window.location.split("/")[3]);
+  });
 });
 
 function addPost() {
-    if (valid === true) {
-        var newPost = {
-            author: "Anonymous",
-            body: $("#userPost").val(),
-//            CryptidId : 
-        };
-        return (newPost)
-    }
+  if (valid === true) {
+    console.log(window.location.split("/")[3]);
+    var cryptidId = window.location.split("/")[3];
+    var newPost = {
+      author: "Anonymous",
+      body: $("#userPost").val(),
+      CryptidId: cryptidId
+    };
+    return newPost;
+  }
 }
