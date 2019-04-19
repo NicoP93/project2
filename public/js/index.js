@@ -1,8 +1,8 @@
 $("#search").click(function(event) {
-  event.preventDefault();
+  event.preventDefault(); 
 
-  var searchInput = $("#search-input").val();
-  var searchClass = $("#search-class").val();
+  var searchInput = $("#input square").val();
+  var searchClass = $("#search-input").val();
   console.log(searchInput + searchClass);
 });
 // Close the dropdown menu if the user clicks outside of it
