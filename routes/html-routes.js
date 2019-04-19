@@ -1,5 +1,5 @@
 var db = require("../models");
-
+var moment = require("moment");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
@@ -27,8 +27,12 @@ module.exports = function(app) {
       db.Cryptid.findOne({
         where : { id: req.params.id },
         //include dbpost currently making cryptid view page not work
-        //include : [db.Post]
+        include : [db.Post]
       }).then(function(results) {
+        console.log(results);
+        results.Posts.forEach(function(result){
+          result.dataValues.createdAt = moment(result.dataValues.createdAt).format('LLL');
+        })
         res.render("cryptid", {results, prev: +req.params.id -1, next: +req.params.id + 1});
       });
     });
