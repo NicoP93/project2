@@ -30,9 +30,22 @@ body {
 }
 
 .jumbotron h1 {
-  text-align: center;
+  color: rgba(197, 16, 16, 0.822);
+  font-size: 60px;
+  margin-left: 85px;
+  font-weight: 500;
+  font-family: "IBM Plex Mono";
 }
 
+.jumbotron h4 {
+  
+}
+
+.logo2 {
+  width: 60px;
+  height: auto;
+  float: left;
+}
 
 .footer {
   height: 50px;
@@ -280,3 +293,4 @@ a {
   width: 90%;
 
 }
+
