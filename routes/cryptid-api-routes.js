@@ -18,6 +18,7 @@ module.exports = function(app) {
   // // Create a new cryptid
   app.post("/api/cryptid/add", function(req, res) {
     db.Cryptid.create(req.body).then(function(results) {
+      console.log(results);
       res.json(results);
     });
   });
@@ -25,15 +26,10 @@ module.exports = function(app) {
   // Pull a single cryptid by id
   app.get("/api/cryptid/:id", function(req, res) {
     db.Cryptid.findOne({
-      where: { id: req.params.id }
+      where: { id: req.params.id },
+      include: [db.Post]
     }).then(function(results) {
-      // res.json(results);
-      //console.log(results.cryptid);
-      //var jsonObj = JSON.stringify(results, null, 2);
       res.json(results);
-      //  console.log(jsonObj.Cryptid);
-      //  console.log(results.id);
-      //   res.render("example", {results: results});
     });
-  });
+  }); 
 };
