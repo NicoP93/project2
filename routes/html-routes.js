@@ -16,20 +16,20 @@ module.exports = function(app) {
       });
     });
 
-  
-  // app.get("/test", function(req, res){
-  //   db.Cryptid.findOne({
-  //     where: { itemNum: 173}
-  //   }).then(function (results) {
-  //    console.log(JSON.stringify(results, null, 2));
-  //    res.render("example", {cryptid: results})
-  //   });
-  // });
+    app.get("/post/add/:id", function(req, res) {
+      res.render("post", { 
+
+      });
+    });
 
     // Load example page and pass in an example by id
     app.get("/cryptid-view/:id", function(req, res) {
-      db.Cryptid.findOne({ where: { id: req.params.id } }).then(function(results) {
-        res.render("cryptid", { results, prev: +req.params.id -1, next: +req.params.id + 1});
+      db.Cryptid.findOne({
+        where : { id: req.params.id },
+        //include dbpost currently making cryptid view page not work
+        //include : [db.Post]
+      }).then(function(results) {
+        res.render("cryptid", {results, prev: +req.params.id -1, next: +req.params.id + 1});
       });
     });
 
@@ -39,6 +39,12 @@ module.exports = function(app) {
 
     app.get("/login", (req, res) => {
       res.render("login", {});
+    })
+
+    app.get("/directory", function(req, res) {
+      db.Cryptid.findAll({}).then(function(results) {
+        res.render("directory", {results});
+      })
     })
 
   // Render 404 page for any unmatched routes

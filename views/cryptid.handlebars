@@ -7,7 +7,7 @@
       <!--heading of cryptid page-->
       <div class="card mt-4">
         <div class="card-body">
-          <div class = "row">
+          <div class="row">
             <!--erase the placeholder text in this row in the final product-->
             <div class="col-3">
               <p>
@@ -18,7 +18,7 @@
                 <strong>Cryptid Name</strong>: {{results.name}}</p>
             </div>
             <div class="col-5 cryptidClass">
-              <p> 
+              <p>
                 <strong>Cryptid Class</strong>: {{results.objClass}}</p>
             </div>
           </div>
@@ -42,59 +42,65 @@
       </div>
       <div class="card mt-4 descriptionBox">
         <div class="card-body">
-            <p>
-              <strong>Description:</strong> {{results.description}}</p>
+          <p>
+            <strong>Description:</strong> {{results.description}}</p>
         </div>
       </div>
       <div class="card mt-4 scpBox">
         <div class="card-body">
-            <p>
-              <strong>SCP:</strong> {{results.procedures}}</p>
+          <p>
+            <strong>SCP:</strong> {{results.procedures}}</p>
         </div>
       </div>
-        <div class="card mt-4 forumBox">
-          <div class="card-body">
-            <p>
-              <strong>Discussion</strong></p>
-          </div>
+      <div class="card mt-4 forumBox">
+        <div class="card-body">
+          <p>
+            <strong>Discussion</strong>
+          </p>
+          <ul>
+            {{#each results.Posts}}
+            <li>{{this.body}}</li>
+            {{/each}}
+          </ul>
         </div>
-               
+      </div>
+
       <!--unused so far: {{cryptid.page_url}} -->
       <!--footer(geolocation, map, forum)-->
       <div class="card mt-4 footerBox">
         <div class="card-body">
           <div class="row">
-             <div class="col-5">
-               <div class="card geolocationBox footerButtons">
-                  <div class="card-body"> 
-                    <p>
-                      <strong>Geolocation</strong></p>
-                  </div>
+            <div class="col-5">
+              <div class="card geolocationBox footerButtons">
+                <div class="card-body">
+                  <p>
+                    <strong>Geolocation</strong></p>
                 </div>
               </div>
-              <div class="col-2">
-                <img src="../img/logo.png" alt="logo" class ="logo">
-              </div>
-              <div class="col-5">
-                <div class="card mapBox footerButtons">
-                    <div class="card-body">
-                      <p>
-                        <strong>Map</strong></p>
-                    </div>
-                  </div>
+            </div>
+            <div class="col-2">
+              <img src="../img/logo.png" alt="logo" class ="logo">
+              <a href="post/add/{{results.id}}"></a>
+            </div>
+            <div class="col-5">
+              <div class="card mapBox footerButtons">
+                <div class="card-body">
+                  <p>
+                    <strong>Map</strong></p>
                 </div>
-          </div>        
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-            <a href="/">← Back To Home</a>  
+      <a href="/">← Back To Home</a>
     </div>
   </div>
 </div>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/cryptidView.js"></script>
 <script>
-  
-  
+
+
 
 </script>
-

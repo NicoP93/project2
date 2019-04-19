@@ -24,7 +24,8 @@ $("#add").click(function() {
   event.preventDefault();
   validateForm();
   var newCryptid = addSpecimen();
-  $.ajax("/api/add", {
+  console.log(newCryptid);
+  $.ajax("/api/cryptid/add", {
     type: "POST",
     data: newCryptid
   }).then(function() {
@@ -33,30 +34,30 @@ $("#add").click(function() {
   });
 });
 
-$("#submit").click(function() {
-  event.preventDefault();
-  validateForm();
-  $.ajax("/api/cryptid", {
-    type: "GET",
-    data: Cryptid
-  }).then(function() {
-    console.log("fetched cryptids");
-    location.reload();
-  });
-});
+// $("#submit").click(function() {
+//   event.preventDefault();
+//   validateForm();
+//   $.ajax("/api/cryptid", {
+//     type: "GET",
+//     data: Cryptid
+//   }).then(function() {
+//     console.log("fetched cryptids");
+//     location.reload();
+//   });
+// });
 
 function addSpecimen() {
   if (valid === true) {
     var newSpecimen = {
       name: $("#name").val(),
-      number: $("#number").val(),
-      class: $("#select-class").val(),
-      procedures: $("#procedures").val(),
+      itemNum: $("#number").val(),
+      objClass: $("#select-class").val(),
       description: $("#description").val(),
-      pageURL: $("#page-url").val(),
-      imgURL: $("#img-url").val()
+      procedures: $("#procedures").val(),
+      pageUrl: $("#page-url").val(),
+      imgUrl: $("#img-url").val()
     };
-    return(newSpecimen)
+    return newSpecimen;
   }
   console.log(newSpecimen);
 }
