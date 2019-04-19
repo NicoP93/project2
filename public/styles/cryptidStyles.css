@@ -1,51 +1,62 @@
 .imageBox{
-    overflow:hidden;
-  }
-  .descriptionBox{
-    height:100px;
-    overflow:hidden;
-  }
-  .scpBox{
-    height:100px;
-    overflow:hidden;
-  }
-  .footerBox{
-    height:125px;
-  }
-  .cryptidClass{
-    text-align: right;
-  }
-  .geolocationBox{
-    text-align: center;
-  }
-  .mapBox{
-    text-align: center;
-  }
-  .forumBox{
-    height:75px;
-    text-align: center;
-  }
-  .container{
-    background-color: #272926
-  }
-  body{
-    background-color: #51584e
-  }
-  .card{
-    background-color: #d8d8d8
-  }
-  a{
-    color:white;
-  }
-  .footerButtons{
-      background-color:#a1c07e
-  }
-img{
-    max-width:40%;
-    height:auto;
-    margin-left: 30%;
+  overflow:hidden;
+}
+.descriptionBox{
+  height:100px;
+  overflow:hidden;
+}
+.scpBox{
+  height:100px;
+  overflow:hidden;
+}
+.cryptidClass{
+  text-align: right;
+}
+.geolocationBox{
+  text-align: center;
+}
+.mapBox{
+  text-align: center;
+}
+.forumBox{
+  height:75px;
+  text-align: center;
+}
+.container{
+  background-image: url(../img/background.png);
+}
+body{
+  background-color: #51584e
+}
+.card{
+  background-color: #d8d8d8
+}
+a{
+  color:white;
+}
+.footerButtons{
+    background-color:#a1c07e
+}
+.footerBox{
+  height:125px;
+  background-color: #3c3f37
+}
+.resultImage{
+    max-width:55%;
+    border: none;
+    display: block;
+    margin: 0 auto;
+}
+.logo{
+  max-width:100%;
+}
+.fas{
+  border: none;
+  text-align: center;
+  margin-top: 100%;
+  font-size: 25px;
 }
 
-.form-login{
-  height: 200px;
+.fa-arrow-right{
+  float:right;
 }
