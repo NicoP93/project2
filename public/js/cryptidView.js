@@ -65,3 +65,5 @@ $(".forumBox").click(function() {
     console.log("shrinking forum div");
   }
 });
+
+//when we open the forumBox, we will fill the box with our posts
