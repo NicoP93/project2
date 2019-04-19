@@ -29,7 +29,6 @@ module.exports = function(app) {
         //include dbpost currently making cryptid view page not work
         include : [db.Post]
       }).then(function(results) {
-        console.log(results);
         results.Posts.forEach(function(result){
           result.dataValues.createdAt = moment(result.dataValues.createdAt).format('LLL');
         })
