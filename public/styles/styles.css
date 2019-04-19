@@ -30,14 +30,28 @@ body {
 }
 
 .jumbotron h1 {
-  text-align: center;
+  color: rgba(197, 16, 16, 0.822);
+  font-size: 65px;
+  margin-left: 74px;
+  font-weight: 500;
+  font-family: "IBM Plex Mono";
 }
 
+.jumbotron h4 {
+  
+}
+
+.logo2 {
+  width: 60px;
+  height: auto;
+  float: left;
+  margin-top: 10px;
+}
 
 .footer {
   height: 50px;
-  background-color: rgba(47, 50, 63, 0.4);
-  position: fixed;
+  background-color: rgb(33, 34, 36);
+  
   left: 0;
   bottom: 0;
   width: 100%;
@@ -47,6 +61,24 @@ body {
 }
 
 .footer h4 {
+  color: rgba(177, 177, 177, 0.644);
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+
+.footer1 {
+  height: 50px;
+  background-color: rgb(33, 34, 36);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer1 h4 {
   color: rgba(177, 177, 177, 0.644);
   font-family: 'Courier New', Courier, monospace;
   
@@ -96,149 +128,7 @@ body {
   height: 30px;
 }
 
-/* fancy search bar */
 
-
-
-#content {
-  top: 50px !important;
-  height: 20px;
-  width: 20px;
-  margin-left: 98% !important;
-  margin-right: 5px !important;
-  transform: translate(-50%, -50%);
-}
-
-#content.on {
-  -webkit-animation-name: in-out;
-  animation-name: in-out;
-  -webkit-animation-duration: 0.7s;
-  animation-duration: 0.7s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-}
-
-input {
-  box-sizing: border-box;
-  width: 20px;
-  height: 20px;
-  border: 4px solid #ffffff;
-  border-radius: 50%;
-  background: none;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: Roboto;
-  outline: 0;
-  -webkit-transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out,
-    padding 0.2s;
-  transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out,
-    padding 0.2s;
-  -webkit-transition-delay: 0.4s;
-  transition-delay: 0.4s;
-  -webkit-transform: translate(-100%, -50%);
-  -ms-transform: translate(-100%, -50%);
-  transform: translate(-100%, -50%);
-}
-
-.search {
-  background: none;
-  position: absolute;
-  top: 0px;
-  left: 0;
-  height: 35px;
-  width: 35px;
-  padding: 0;
-  border-radius: 100%;
-  outline: 0;
-  border: 0;
-  color: inherit;
-  cursor: pointer;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-  -webkit-transform: translate(-100%, -50%);
-  -ms-transform: translate(-100%, -50%);
-  transform: translate(-100%, -50%);
-}
-
-.search:before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 4px;
-  background-color: #fff;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  margin-top: 12px;
-  margin-left: 15px;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-}
-
-.close {
-  -webkit-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
-  -webkit-transition-delay: 0.4s;
-  transition-delay: 0.4s;
-}
-
-.close:before {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 4px;
-  margin-top: -1px;
-  margin-left: -8px;
-  background-color: #fff;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-}
-
-.close:after {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 4px;
-  background-color: #fff;
-  margin-top: -1px;
-  margin-left: -8px;
-  cursor: pointer;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.square {
-  box-sizing: border-box;
-  padding: 0 40px 0 10px;
-  width: 375px;
-  height: 35px;
-  border: 4px solid #ffffff;
-  border-radius: 0;
-  background: none;
-  color: #fff;
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 400;
-  outline: 0;
-  -webkit-transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out,
-    padding 0.2s;
-  transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out,
-    padding 0.2s;
-  -webkit-transition-delay: 0.4s, 0s, 0.4s;
-  transition-delay: 0.4s, 0s, 0.4s;
-  -webkit-transform: translate(-100%, -50%);
-  -ms-transform: translate(-100%, -50%);
-  transform: translate(-100%, -50%);
-}
-
-/* end of fancy hover */
 
 a {
   font-family: "IBM Plex Mono";
@@ -258,10 +148,10 @@ a {
 .directory-buttons {
   color: white;
   font-size: 22px;
-  border: 1px solid white;
+  border: 1.5px solid rgba(158, 158, 158, 0.5);
   display: flex;
   width: 85%;
-  
+  font-family: 'Courier New', Courier, monospace;
   background-color: rgb(32, 35, 45, .6);
   margin: 20px 0px;
 }
@@ -277,6 +167,27 @@ a {
 }
 
 .directlogo {
-  width: 90%;
+  width: 80%;
+  margin-left: 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
+.navcontainer a {
+  font-family: "IBM Plex Mono";
+  
+}
+
+.navcontainer li {
+  margin-bottom: 20px;
+}
+
+.navbar button {
+  color: #fff;
+}
+
+.navcontainer {
+  border-bottom: 1.5px solid rgba(158, 158, 158, 0.5);
+  border-top: 1.5px solid rgba(158, 158, 158, 0.5);
+  margin-bottom: 20px;
 }
