@@ -21,12 +21,14 @@
 .forumBox{
   height:75px;
   text-align: center;
+  overflow:hidden;
 }
 .container{
   background-image: url(../img/background.png);
 }
 body{
-  background-color: #51584e
+  background-image: url(./../img/titlebackground.png);
+  
 }
 .card{
   background-color: #d8d8d8
@@ -53,10 +55,17 @@ a{
 .fas{
   border: none;
   text-align: center;
+  color: #161615;
   margin-top: 100%;
   font-size: 25px;
 }
 
 .fa-arrow-right{
   float:right;
+}
+.headerBox{
+  font-family: 'Archivo Narrow', sans-serif;
+}
+ul{
+  text-align:left;
 }
