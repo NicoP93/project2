@@ -11,7 +11,7 @@ module.exports = function(app) {
   })
 
   app.get("/cryptid-view/add", function(req, res) {
-      res.render("add", { 
+      res.render("add", {
 
       });
     });
@@ -24,7 +24,7 @@ module.exports = function(app) {
 
     // Load example page and pass in an example by id
     app.get("/cryptid-view/:id", function(req, res) {
-      db.Cryptid.findOne({ 
+      db.Cryptid.findOne({
         where : { id: req.params.id },
         include : [db.Post]
       }).then(function(results) {
@@ -38,6 +38,12 @@ module.exports = function(app) {
 
     app.get("/login", (req, res) => {
       res.render("login", {});
+    })
+
+    app.get("/directory", function(req, res) {
+      db.Cryptid.findAll({}).then(function(results) {
+        res.render("directory", {results});
+      })
     })
 
   // Render 404 page for any unmatched routes
