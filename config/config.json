@@ -1,10 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "SET ME",
+    "password": "rjtn g",
     "database": "cryptidX",
     "host": "localhost",
-    "port": SET ME,
+    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
