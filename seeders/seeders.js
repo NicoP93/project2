@@ -1,10 +1,6 @@
 /* eslint-disable */
 /* tslint:disable */
 module.exports = {
-<<<<<<< HEAD
-=======
-
->>>>>>> master
     up: (queryInterface, Sequelize) => {
       return queryInterface.bulkInsert('Cryptids',
       [

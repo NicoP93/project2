@@ -1,5 +1,8 @@
 var db = require("../models");
 
+// Requiring our custom middleware for checking if a user is logged in
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
@@ -38,14 +41,17 @@ module.exports = function(app) {
     });
 
     app.get("/login", (req, res) => {
+      if(req.user) {
+        res.redirect("/");
+      }
       res.render("login", {});
-    })
+    });
 
     app.get("/directory", function(req, res) {
       db.Cryptid.findAll({}).then(function(results) {
         res.render("directory", {results});
       })
-    })
+    });
 
   // Render 404 page for any unmatched routes
 
