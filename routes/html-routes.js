@@ -18,7 +18,7 @@ module.exports = function(app) {
 
     app.get("/post/add/:id", function(req, res) {
       res.render("post", { 
-
+        id: req.params.id
       });
     });
 
