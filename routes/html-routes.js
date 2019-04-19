@@ -24,6 +24,7 @@ module.exports = function(app) {
 
     // Load example page and pass in an example by id
     app.get("/cryptid-view/:id", function(req, res) {
+     
       db.Cryptid.findOne({
         where : { id: req.params.id },
         include : [db.Post]
