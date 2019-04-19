@@ -72,4 +72,23 @@ $(".forumBox").click(function() {
     forumSize = "small";
     console.log("shrinking forum div");
   }
+<<<<<<< HEAD
 });
+=======
+});
+
+// $("#post").click(function () {
+//   event.preventDefault();
+
+//   var newPost = addPost();
+//   console.log("new post:" + newPost);
+//   $.ajax("api/post/add", {
+//     type: "POST",
+//     data: newPost
+//   }).then(function () {
+//     //this reloads the cryptid-view page with the id from before
+//     window.location.replace("/cryptid-view/" + window.location.split("/")[3]);
+//   });
+// });
+
+>>>>>>> 9047f78d3db9c366d87212e0546b2979370ea107

@@ -18,13 +18,13 @@ module.exports = function(app) {
 
     app.get("/post/add/:id", function(req, res) {
       res.render("post", { 
-
+        id: req.params.id
       });
     });
 
     // Load example page and pass in an example by id
     app.get("/cryptid-view/:id", function(req, res) {
-      db.Cryptid.findOne({
+           db.Cryptid.findOne({
         where : { id: req.params.id },
         //include dbpost currently making cryptid view page not work
         include : [db.Post]
