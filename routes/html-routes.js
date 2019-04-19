@@ -41,6 +41,12 @@ module.exports = function(app) {
       res.render("login", {});
     })
 
+    app.get("/directory", function(req, res) {
+      db.Cryptid.findAll({}).then(function(results) {
+        res.render("directory", {results});
+      })
+    })
+
   // Render 404 page for any unmatched routes
 
 };

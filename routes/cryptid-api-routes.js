@@ -9,6 +9,12 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/directory", function(req, res) {
+    db.Cryptid.findAll({}).then(function(results) {
+      res.json(results);
+    });
+  });
+
   // // Create a new cryptid
   app.post("/api/cryptid/add", function(req, res) {
     db.Cryptid.create(req.body).then(function(results) {

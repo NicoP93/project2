@@ -255,3 +255,28 @@ a {
   justify-content: space-evenly;
 }
 
+.directory-buttons {
+  color: white;
+  font-size: 22px;
+  border: 1px solid white;
+  display: flex;
+  width: 85%;
+  
+  background-color: rgb(32, 35, 45, .6);
+  margin: 20px 0px;
+}
+
+.directcontainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 55px;
+}
+
+.directory-buttons p {
+  margin-right: 20px;
+}
+
+.directlogo {
+  width: 90%;
+
+}
