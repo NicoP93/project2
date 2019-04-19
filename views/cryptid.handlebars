@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/styles/cryptidStyles.css" media="screen" title="no title" charset="utf-8">
+<title>Cryptid Viewer</title>
 
 <div class="container">
   <div class="row">
@@ -10,7 +11,7 @@
             <!--erase the placeholder text in this row in the final product-->
             <div class="col-3">
               <p>
-                <strong>Cryptid No.</strong>: {{results.itemNum}}</p>
+                <strong>Cryptid No.</strong> {{results.itemNum}}</p>
             </div>
             <div class="col-4">
               <p>
@@ -26,7 +27,17 @@
       <!--box where we put the image-->
       <div class="card mt-4 imageBox">
         <div class="card-body">
-          <img src="{{results.imgUrl}}"alt="no recorded image" class ="resultImage"/>
+          <div class = "row">
+            <div class="col-1">
+              <a href ="{{prev}}"><i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="col-10">
+              <img src="{{results.imgUrl}}"alt="no recorded image" class ="resultImage"/>
+            </div>
+            <div class="col-1">
+              <a href ="{{next}}"><i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="card mt-4 descriptionBox">

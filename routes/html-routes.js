@@ -29,7 +29,7 @@ module.exports = function(app) {
     // Load example page and pass in an example by id
     app.get("/cryptid-view/:id", function(req, res) {
       db.Cryptid.findOne({ where: { id: req.params.id } }).then(function(results) {
-        res.render("cryptid", { results});
+        res.render("cryptid", { results, prev: +req.params.id -1, next: +req.params.id + 1});
       });
     });
 

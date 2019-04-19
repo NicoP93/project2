@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/styles/addStyles.css" media="screen" title="no title" charset="utf-8">
+<title>Add a Cryptid</title>
 <div class="container">
     <div class="top-container">
         <img src="../img/logo.png" alt="logo" class ="logo">
@@ -13,11 +14,23 @@
 <form class="add-specimen" action="script.cgi" onSubmit="return validateForm()">
     <input class="form-control" id="name" type="text" placeholder="Name">
 
-    <input class="form-control mt-4" id="number" type="number" placeholder="Item Number">
+    <input class="form-control mt-2" id="number" type="number" placeholder="Item Number">
 
+    <div class="form-group mt-2">
+        
+        <textarea class="form-control" id="procedures" rows="3" placeholder="Containment Procedures"></textarea>
+    </div>
 
+    <div class="form-group mt-2">
+        
+        <textarea class="form-control" id="description" rows="3" placeholder="Description"></textarea>
+    </div>
 
-    <select class="selectpicker mt-4" id="select-class">
+    <input class="form-control" id="page-url" type="text" placeholder="Wiki Page URL">
+
+    <input class="form-control mt-2" id="img-url" type="text" placeholder="Image URL">
+
+    <select class="selectpicker mt-2" id="select-class">
 
         <option value="">Select Class</option>
         <option value="safe">Safe</option>
@@ -28,24 +41,10 @@
     </select>
 
     <br>
-
-    <div class="form-group mt-4">
-        
-        <textarea class="form-control" id="procedures" rows="3" placeholder="Containment Procedures"></textarea>
-    </div>
-
-    <div class="form-group mt-4">
-        
-        <textarea class="form-control" id="description" rows="3" placeholder="Description"></textarea>
-    </div>
-
-    <input class="form-control" id="page-url" type="text" placeholder="Wiki Page URL">
-
-    <input class="form-control mt-4" id="img-url" type="text" placeholder="Image URL">
 </form>
 
     
-    <button class="btn btn-warning btn-lg mt-4" id="add" role="button">add</button>
+    <button class="btn btn-warning btn-lg mt-2" id="add" role="button">add</button>
     <div class="invalid"></div>
 
 </div>

@@ -73,3 +73,21 @@ $(".forumBox").click(function() {
     console.log("shrinking forum div");
   }
 });
+
+// var db = require("../models");
+// module.exports = function(app) {
+
+//increment id number in the url for the right arrow
+//decrement id number in the url for the left arrow
+
+
+$(".fa-arrow-right").click(function() {
+  console.log("clicked right arrow");
+  // app.get("/api/cryptid/:id", function(req, res) {
+  //   db.Cryptid.findOne({
+  //     where: { id: req.params.id }
+  //   }).then(function(){
+  //     console.log(req.params.id)
+  //   })
+//   });
+ });

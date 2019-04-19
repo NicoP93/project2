@@ -1,10 +1,19 @@
 .logo{
     height:50px;
     width:auto;
+    border: none;
+    display: block;
+    margin: 0 auto;
 }
 body{
     background-image: url("../img/background.png")
 }
 .add-specimen{
-    background-color: #8c9482
+    background-color: #8c9482;
+    text-align: center;
+}
+.btn{
+    border: none;
+    display: block;
+    margin: 0 auto;
 }
