@@ -51,13 +51,13 @@ function addSpecimen() {
     var newSpecimen = {
       name: $("#name").val(),
       itemNum: $("#number").val(),
-      Objclass: $("#select-class").val(),
+      objClass: $("#select-class").val(),
       description: $("#description").val(),
       procedures: $("#procedures").val(),
-      pageURL: $("#page-url").val(),
-      imgURL: $("#img-url").val()
+      pageUrl: $("#page-url").val(),
+      imgUrl: $("#img-url").val()
     };
-    return(newSpecimen)
+    return newSpecimen;
   }
   console.log(newSpecimen);
 }

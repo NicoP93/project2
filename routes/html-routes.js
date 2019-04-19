@@ -16,7 +16,7 @@ module.exports = function(app) {
       });
     });
 
-    app.get("/post/add", function(req, res) {
+    app.get("/post/add/:id", function(req, res) {
       res.render("post", { 
 
       });
