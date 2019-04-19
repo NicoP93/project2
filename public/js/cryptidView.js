@@ -72,9 +72,6 @@ $(".forumBox").click(function() {
     forumSize = "small";
     console.log("shrinking forum div");
   }
-<<<<<<< HEAD
-});
-=======
 });
 
 // $("#post").click(function () {
@@ -91,4 +88,3 @@ $(".forumBox").click(function() {
 //   });
 // });
 
->>>>>>> 9047f78d3db9c366d87212e0546b2979370ea107
