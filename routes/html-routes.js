@@ -24,11 +24,10 @@ module.exports = function(app) {
 
     // Load example page and pass in an example by id
     app.get("/cryptid-view/:id", function(req, res) {
-     
-      db.Cryptid.findOne({
+           db.Cryptid.findOne({
         where : { id: req.params.id },
         //include dbpost currently making cryptid view page not work
-        //include : [db.Post]
+        include : [db.Post]
       }).then(function(results) {
         res.render("cryptid", {results, prev: +req.params.id -1, next: +req.params.id + 1});
       });

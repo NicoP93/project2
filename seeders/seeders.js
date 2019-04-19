@@ -1,10 +1,6 @@
 /* eslint-disable */
 /* tslint:disable */
 module.exports = {
-<<<<<<< HEAD
-=======
-
->>>>>>> master
     up: (queryInterface, Sequelize) => {
       return queryInterface.bulkInsert('Cryptids',
       [
@@ -223,10 +219,6 @@ module.exports = {
     down: (queryInterface, Sequelize) => {
       return queryInterface.bulkDelete('Users', null, {});
     }
-<<<<<<< HEAD
   };
   
   
-=======
-};
->>>>>>> master
