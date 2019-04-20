@@ -1,11 +1,13 @@
 <link rel="stylesheet" href="/styles/cryptidStyles.css" media="screen" title="no title" charset="utf-8">
 <title>Cryptid Viewer</title>
 
+<div class="top-container">
+</div>
 <div class="container">
   <div class="row">
     <div class="col-12">
       <!--heading of cryptid page-->
-      <div class="card mt-4">
+      <div class="card mt-4 headerBox">
         <div class="card-body">
           <div class="row">
             <!--erase the placeholder text in this row in the final product-->
@@ -49,51 +51,63 @@
       <div class="card mt-4 scpBox">
         <div class="card-body">
           <p>
-            <strong>SCP:</strong> {{results.procedures}}</p>
+            <strong>Containment Procedures:</strong> {{results.procedures}}</p>
         </div>
       </div>
       <div class="card mt-4 forumBox">
         <div class="card-body">
           <p>
             <strong>Discussion</strong>
+            <br>
+            (click to see comments)
           </p>
           <ul>
             {{#each results.Posts}}
-            <li>{{this.body}}</li>
+            <li><strong>{{this.author}}</strong>: {{this.body}} <i>{{this.createdAt}}</i></li>
             {{/each}}
           </ul>
         </div>
       </div>
 
-      <!--unused so far: {{cryptid.page_url}} -->
-      <!--footer(geolocation, map, forum)-->
+      <!--footer(geolocation, map)-->
       <div class="card mt-4 footerBox">
         <div class="card-body">
           <div class="row">
             <div class="col-5">
               <div class="card geolocationBox footerButtons">
+                <a href="/">
                 <div class="card-body">
-                  <p>
-                    <strong>Geolocation</strong></p>
+                
+                    <strong id=>Home</strong>
+                  
+                   
                 </div>
+                </a>
+
               </div>
             </div>
+
             <div class="col-2">
-              <img src="../img/logo.png" alt="logo" class ="logo">
+              <a href="./index.handlebars"><img src="../img/logo.png" alt="logo" class ="logo"></a>
               <a href="post/add/{{results.id}}"></a>
             </div>
+            
             <div class="col-5">
               <div class="card mapBox footerButtons">
+                <a href="/post/add/{{results.id}}">
                 <div class="card-body">
-                  <p>
-                    <strong>Map</strong></p>
+              
+                     
+                    <strong id="Post">Post</strong>
+                     
                 </div>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <a href="/">← Back To Home</a>
+
     </div>
   </div>
 </div>
