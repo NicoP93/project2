@@ -75,34 +75,39 @@
           <div class="row">
             <div class="col-5">
               <div class="card geolocationBox footerButtons">
+                <a href="/">
                 <div class="card-body">
-                  <p>
-                    <strong>Geolocation</strong></p>
+                
+                    <strong id=>Home</strong>
+                  
+                   
                 </div>
+                </a>
+
               </div>
             </div>
+
             <div class="col-2">
-              <a href="../"><img src="../img/logo.png" alt="logo" class ="logo"></a>
+              <a href="./index.handlebars"><img src="../img/logo.png" alt="logo" class ="logo"></a>
               <a href="post/add/{{results.id}}"></a>
             </div>
+            
             <div class="col-5">
               <div class="card mapBox footerButtons">
+                <a href="/post/add/{{results.id}}">
                 <div class="card-body">
-                  <p>
-                    <strong>Post</strong>
-                      
-                      <a href="/post/add/{{results.id}}">
-                        <!--change button to div on click-->
-                        <button class="btn btn-secondary btn-lg" id="post" role="button">Post</button>
-                      </a>
-                    </p>
+              
+                     
+                    <strong id="Post">Post</strong>
+                     
                 </div>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <a href="/">← Back To Home</a>
+
     </div>
   </div>
 </div>
