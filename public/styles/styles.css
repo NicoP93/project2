@@ -191,3 +191,51 @@ a {
   border-top: 1.5px solid rgba(158, 158, 158, 0.5);
   margin-bottom: 20px;
 }
+
+.logincontainer {
+  background-color: rgb(33, 34, 36);
+  color: white;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.choices {
+  display: flex;
+  text-align: center;
+}
+
+.logina {
+  background-color: rgb(33, 34, 36);
+  width: 50%;
+  border: none;
+}
+
+.signup {
+  background-color: black;
+  width: 50%;
+  border: none;
+}
+
+.loginforms {
+  height: 225px;
+}
+
+.signupforms {
+  height: 225px;
+  margin-top: -225px;
+  visibility: hidden;
+}
+
+.logsign {
+  background-color: plum;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.email {
+  width: 300px;
+  
+}
+
