@@ -16,7 +16,7 @@
                     <a href="/cryptid-view/add">Add</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/login" class="login">Log In</a>
+                    <a href="/directory" >Directory</a>
         </div>
         </li>
 
@@ -25,59 +25,25 @@
 </nav>
 </div>
 
-<h1>Log In</h1>
+<h1 class="title">Log In</h1>
 
 <div class="logsign">
 
-    <form action="/api/login" method="POST">
+    <form action="/api/login" method="POST" class="userinfo">
         <input placeholder="Email" class="email" name="email" />
         <input placeholder="Password" class="password" name="password" type="password" />
-        <button>Login</button>
+        <button class="usersubmit">Log In</button>
+        <p class="abovelogsignlink">New to the site?</p>
+        <a href="/signup" class="tosignup">Sign Up</a>
     </form>
-
-</div>
-
-
-{{!-- <title>Login</title>
-
-
-
-<div>
-    <form action="/api/login" method="POST">
-        <input placeholder="Email" name="email"/>
-        <input placeholder="Password" name="password" type="password"/>
-    <button>Login</button>
-    </form>
-</div> --}}
-
-{{!-- <div class="logincontainer">
-    <div class="choices">
-        <button class="login">
-            <h3>Log In</h3>
-        </button>
-        <button class="signup">
-            <h3>Sign Up</h3>
-        </button>
-    </div>
-    <div class="loginforms">
-        <form action="/api/login" method="POST">
-            <input placeholder="Email" name="email" />
-            <input placeholder="Password" name="password" type="password" />
-            <button>Log In</button>
-        </form>
-    </div>
-    <div class="signupforms">
-        <form action="/api/login" method="POST">
-            <input placeholder="Email" name="email" />
-            <input placeholder="Password" name="password" type="password" />
-            <button>Sign Up</button>
-        </form>
-    </div>
-</div>
 
 <div class="footer1">
     <h4>&copy; 2019</h4>
-</div> --}}
+</div>
+    
+
+</div>
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/login.js"></script>
