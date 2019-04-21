@@ -1,0 +1,28 @@
+need to handle singup errors
+"message": "Validation isEmail on email failed",
+"message": "email must be unique",
+Bad request - password left blank
+solution: redirect to an error page, redirect back to signup and add an alert
+
+need to handle login errors
+Bad request - password left blank
+Unauthorized - wrong password or email
+solution: redirect to an error page, redirect back to login and add an alert
+
+need to handle what happens when user logs in
+currently goes to a page that says Welcome
+members needs to built
+
+need to handle the logout command
+add to other pages
+works on the members page
+
+need to handle what happens when the user clicks log in after already logging in
+_http_outgoing.js:470
+    throw new ERR_HTTP_HEADERS_SENT('set');
+    ^
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+redirect to members?
+
+need to prevent users from going to /signup when logged in
+
