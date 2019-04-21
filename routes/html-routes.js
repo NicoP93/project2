@@ -1,4 +1,5 @@
 var db = require("../models");
+var path = require("path");
 
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
@@ -41,15 +42,33 @@ module.exports = function(app) {
     });
 
     app.get("/signup", (req, res) => {
+      if(req.user) {
+        //user has logged in
+        res.redirect("/members");
+      }
       res.render("signup", {});
     });
 
+    // Here we've add our isAuthenticated middleware to this route.
+  // If a user who is not logged in tries to access this route they will be redirected to the signup page
+  app.get("/members", isAuthenticated, function(req, res) {
+    //change this to a res.render() members handlebars page
+    res.sendFile(path.join(__dirname, "../public/members.html"));
+  });
+
     app.get("/login", (req, res) => {
       if(req.user) {
-        res.redirect("/");
+        //user has logged in
+        res.redirect("/members");
       }
       res.render("login", {});
     });
+
+    // // Here we've add our isAuthenticated middleware to this route.
+    // // If a user who is not logged in tries to access this route they will be redirected to the signup page
+    // app.get("/authors", isAuthenticated, function(req, res) {
+    //   res.redirect("/authors");
+    // });
 
     app.get("/directory", function(req, res) {
       db.Cryptid.findAll({}).then(function(results) {
