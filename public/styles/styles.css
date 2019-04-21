@@ -5,7 +5,7 @@ body {
 .top-container {
 
   background-image: url(./../img/titlebackground.png);
-  height: 150px;
+  min-height: 150px;
 
 }
 
@@ -27,7 +27,10 @@ body {
   border: 1.5px solid rgb(158, 158, 158, .4);
   color: white;
   font-family: 'Courier New', Courier, monospace;
+  max-width: 600px;
+  margin-bottom: 80px;
 }
+
 
 .jumbotron h1 {
   color: rgba(197, 16, 16, 0.822);
@@ -168,9 +171,7 @@ a {
 
 .directlogo {
   width: 80%;
-  margin-left: 22px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px auto;
 }
 
 .navcontainer a {
@@ -227,15 +228,58 @@ a {
 }
 
 .logsign {
-  background-color: plum;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
+  width: 90%;
+  margin: 15px auto;
+  background-color: rgb(32, 35, 45, .6);
+  border: 1.5px solid rgb(158, 158, 158, .4);
+  margin-bottom: 80px;
 }
 
 .email {
-  width: 300px;
+  width: 275px;
+  padding: 5px;
+  margin: 30px auto 10px auto;
+}
+
+.password {
+  width: 275px;
+  padding: 5px;
+  margin: 30px auto 0px auto;
+}
+
+.usersubmit {
+  margin: 30px auto;
+  padding: 20px;
+  font-family: "IBM Plex Mono";
+  color: white;
+  background-color:black;
+  border: 1.5px solid rgb(158, 158, 158, .4);
+  font-size: 30px;
+}
+
+.title {
+  color: white;
+  font-family: "IBM Plex Mono";
+  text-align: center;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
   
 }
 
+.tosignup {
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  top: -10px;
+  padding-bottom: 20px;
+}
+
+.abovelogsignlink {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
