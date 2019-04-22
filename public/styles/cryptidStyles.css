@@ -27,8 +27,8 @@
   background-image: url(../img/background.png);
 }
 body{
-  background-image: url(./../img/titlebackground.png);
-  
+  background-image: url(./../img/titlebackground.png), url(../img/background.png);
+  background-repeat: no-repeat, repeat;
 }
 .card{
   background-color: #d8d8d8
