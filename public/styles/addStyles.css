@@ -6,14 +6,25 @@
     margin: 0 auto;
 }
 body{
-    background-image: url("../img/background.png")
+    background-image: url(./../img/titlebackground.png), url(../img/background.png);
+    background-repeat: no-repeat, repeat;
 }
 .add-specimen{
-    background-color: #8c9482;
+    background-color: #878a84;
     text-align: center;
 }
 .btn{
     border: none;
     display: block;
     margin: 0 auto;
+}
+.add-post{
+    background-color: #878a84;
+}
+h4{
+    color:#161815;
+    text-align: center;
+}
+a{
+    color:#7d9174;
 }
