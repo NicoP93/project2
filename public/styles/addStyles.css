@@ -7,7 +7,7 @@
 }
 body{
     background-image: url(./../img/titlebackground.png), url(../img/background.png);
-    background-repeat: no-repeat, repeat;
+    background-repeat: repeat-x, repeat;
 }
 .add-specimen{
     background-color: #878a84;
@@ -18,7 +18,7 @@ body{
     display: block;
     margin: 0 auto;
 }
-.add-post{
+.add-post{ 
     background-color: #878a84;
 }
 h4{
